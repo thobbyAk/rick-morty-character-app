@@ -10,7 +10,7 @@ const PageNumber = ({
 }) => {
 	return (
 		<>
-			{pages.map((page, index) => (
+			{pages?.map((page, index) => (
 				<React.Fragment key={index}>
 					{page <= maxPageLimit && page > minPageLimit && (
 						<span

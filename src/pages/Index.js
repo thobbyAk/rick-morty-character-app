@@ -33,7 +33,7 @@ const Index = ({ characters, currentPage, setCurrentPage, total }) => {
 				)}
 			</>
 		);
-	if (characters.length === 0) {
+	if (characters?.length === 0) {
 		return <EmptyState />;
 	}
 };

@@ -6,7 +6,7 @@ const CharacterCard = ({ details, viewCharacter }) => {
 	return (
 		<div className="rounded-lg border bg-teal-600 border-emerald-600 flex shadow-lg flex-col w-full h-62">
 			<div className="flex justify-center p-3">
-				<img src={details.image} alt="" className="rounded-full h-40 w-40" />
+				<img src={details?.image} alt="" className="rounded-full h-40 w-40" />
 			</div>
 			<div className="flex flex-col p-4">
 				<div className="text-base  text-dark mb-2 capitalize font-normal">

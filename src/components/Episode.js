@@ -21,9 +21,9 @@ const Episode = ({ episodeList, episode, currentIndex, setCurrentIndex }) => {
 					className="block w-full rounded-md border-black border-2 bg-teal-600  focus:border-black  focus:border-black"
 					defaultValue={`Episode ${currentIndex}`}
 				>
-					{episodeList.map((tab) => (
-						<option value={tab.id} key={tab.id}>
-							Episode {tab.id}
+					{episodeList?.map((tab) => (
+						<option value={tab?.id} key={tab?.id}>
+							Episode {tab?.id}
 						</option>
 					))}
 				</select>
@@ -31,20 +31,20 @@ const Episode = ({ episodeList, episode, currentIndex, setCurrentIndex }) => {
 			<div className="hidden sm:block">
 				<div className="border-b border-black">
 					<nav className="-mb-px flex space-x-8" aria-label="Tabs">
-						{episodeList.slice(0, 7).map((tab, index) => (
+						{episodeList?.slice(0, 7).map((tab, index) => (
 							<span
 								key={index}
 								onClick={() => {
-									setCurrentIndex(tab.id);
+									setCurrentIndex(tab?.id);
 								}}
 								className={classNames(
-									currentIndex === tab.id
+									currentIndex === tab?.id
 										? "border-2 border-black text-black cursor-pointer  "
 										: "border-transparent text-black cursor-pointer  hover:text-gray-700 hover:border-black-300",
 									"whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
 								)}
 							>
-								Episode {tab.id}
+								Episode {tab?.id}
 							</span>
 						))}
 					</nav>
